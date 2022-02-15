@@ -69,7 +69,7 @@ var getYTPVideoID = function( url ) {
 			mask: false,
 			opacity: 1,
 			quality: "default", //or “small”, “medium”, “large”, “hd720”, “hd1080”, “highres”
-			mute: true,
+			mute: false,
 			loop: true,
 			showControls: false,
 			showAnnotations: false,
@@ -187,7 +187,7 @@ var getYTPVideoID = function( url ) {
 				var playerVars = {
 					'modestbranding': 1,
 					'autoplay': 0,
-					'mute': 1,
+					'mute': 0,
 					'controls': 0,
 					'showinfo': 0,
 					'rel': 0,
@@ -687,7 +687,7 @@ var getYTPVideoID = function( url ) {
 			YTPlayer.opt.startAt = 0;
 			YTPlayer.opt.stopAt = 0;
 			YTPlayer.opt.mask = false;
-			YTPlayer.opt.mute = true;
+			YTPlayer.opt.mute = false;
 			YTPlayer.hasData = false;
 			YTPlayer.hasChanged = true;
 			YTPlayer.player.loopTime = undefined;
