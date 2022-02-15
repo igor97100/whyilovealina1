@@ -184,7 +184,7 @@ var getYTPVideoID = function( url ) {
 
 				var playerVars = {
 					'modestbranding': 1,
-					'autoplay': 0,
+					'autoplay': 1,
 					'controls': 0,
 					'showinfo': 0,
 					'rel': 0,
