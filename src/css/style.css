@@ -2247,7 +2247,7 @@ sup {
 /* YouTube Player ...................... */
 /* ------------------------------------- */
 .mbYTP_wrapper {
-  left: -10% !important;
+  left: 0% !important;
   width: 122% !important;
   
   opacity: 1 !important;

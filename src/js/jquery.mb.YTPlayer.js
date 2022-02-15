@@ -194,7 +194,7 @@ var getYTPVideoID = function( url ) {
 					'enablejsapi': 1,
 					'version': 3,
 					'playerapiid': playerID,
-					'origin': 'null',
+					'origin': 'https://www.whyilovealina.com',
 					'allowfullscreen': true,
 					'wmode': 'transparent',
 					'iv_load_policy': YTPlayer.opt.showAnnotations
