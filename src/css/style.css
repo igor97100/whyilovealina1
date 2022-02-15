@@ -1646,7 +1646,7 @@ sup {
   height: 100vh;
 }
 .section .vertical-gallery:nth-child(1) .vertical-photo {
-  background: url("../img/vertical-gallery-1.jpg") center;
+  background: url("../img/IMG_5041_2.JPEG") center;
   background-size: cover;
 }
 .section .vertical-gallery:nth-child(2) .vertical-photo {
@@ -1700,7 +1700,6 @@ sup {
 #menu li.main-nav:nth-child(1)::after {
   background: url("../img/IMG_5041_2.JPEG") center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #section2,
