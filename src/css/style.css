@@ -38,7 +38,7 @@
 @import url(jquery.mCustomScrollbar.css);
 @import url(jquery.pagepiling.css);
 /* Google Fonts */
-@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700|Lora:400,400i,700,700i|Lato:400,300,700|Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700|Lora:400,400i,700,700i|Lato:400,300,700|Raleway:300,400,500,700");
 /*
 * http://meyerweb.com/eric/tools/css/reset/ 
 * v2.0 | 20110126
@@ -1646,7 +1646,7 @@ sup {
   height: 100vh;
 }
 .section .vertical-gallery:nth-child(1) .vertical-photo {
-  background: url("../img/IMG_5041_2.JPEG") center;
+  background: url("../img/intro.jpeg") center;
   background-size: cover;
 }
 .section .vertical-gallery:nth-child(2) .vertical-photo {
@@ -1698,7 +1698,7 @@ sup {
 /* ------------------------------------- */
 #section1,
 #menu li.main-nav:nth-child(1)::after {
-  background: url("../img/IMG_5041_2.JPEG") center;
+  background: url("../img/intro.jpeg") center;
   background-size: cover;
 }
 
@@ -1722,7 +1722,7 @@ sup {
 
 /*#section5,*/
 #menu li.main-nav:nth-child(5)::after {
-  background: url("../img/background-5.jpg") center;
+  background: url("../img/IMG_9387.jpg") center;
   background-size: cover;
 }
 
@@ -2261,7 +2261,7 @@ sup {
 }
 
 .youtube-background-mobile {
-  background: url("../img/background-7.jpg") center;
+  background: url("../img/IMG_9387.jpg") center;
   background-size: cover;
 }
 
