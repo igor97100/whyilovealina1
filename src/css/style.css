@@ -1738,6 +1738,11 @@ sup {
   background-size: cover;
 }
 
+#mbYTP_bgndVideo{
+  width: 129%;
+  height: 190%;
+}
+
 /* #section7 {
   background: #2B2D35;
 } */
@@ -2243,8 +2248,8 @@ sup {
 /* ------------------------------------- */
 .mbYTP_wrapper {
   left: 0 !important;
-  width: 100vw !important;
-  min-width: 0 !important;
+  width: 122% !important;
+  
   opacity: 1 !important;
 }
 .mbYTP_wrapper:after {

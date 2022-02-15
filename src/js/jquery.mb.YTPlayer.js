@@ -20,11 +20,13 @@
  ___________________________________________________________________________________________________________________________________________________*/
 var ytp = ytp || {};
 
+
 function onYouTubeIframeAPIReady() {
 	if( ytp.YTAPIReady ) return;
 	ytp.YTAPIReady = true;
 	jQuery( document ).trigger( "YTAPIReady" );
 }
+
 
 var getYTPVideoID = function( url ) {
 	var videoID, playlistID;
@@ -67,7 +69,7 @@ var getYTPVideoID = function( url ) {
 			mask: false,
 			opacity: 1,
 			quality: "default", //or “small”, “medium”, “large”, “hd720”, “hd1080”, “highres”
-			mute: false,
+			mute: true,
 			loop: true,
 			showControls: false,
 			showAnnotations: false,
@@ -184,14 +186,15 @@ var getYTPVideoID = function( url ) {
 
 				var playerVars = {
 					'modestbranding': 1,
-					'autoplay': 1,
+					'autoplay': 0,
+					'mute': 1,
 					'controls': 0,
 					'showinfo': 0,
 					'rel': 0,
 					'enablejsapi': 1,
 					'version': 3,
 					'playerapiid': playerID,
-					'origin': 'https://www.whyilovealina.com',
+					'origin': 'null',
 					'allowfullscreen': true,
 					'wmode': 'transparent',
 					'iv_load_policy': YTPlayer.opt.showAnnotations
@@ -288,7 +291,7 @@ var getYTPVideoID = function( url ) {
 					opacity: 1
 				} );
 
-				if( true) {
+				if( true ) {
 					playerBox.after( overlay );
 					YTPlayer.overlay = overlay;
 				}
@@ -338,7 +341,7 @@ var getYTPVideoID = function( url ) {
 						ytp.backgroundIsInited = true;
 					}
 
-					YTPlayer.opt.autoPlay = typeof YTPlayer.opt.autoPlay == "undefined" ? ( YTPlayer.isBackground ? true : false ) : YTPlayer.opt.autoPlay;
+					YTPlayer.opt.autoPlay = 0;
 					YTPlayer.opt.vol = YTPlayer.opt.vol ? YTPlayer.opt.vol : 100;
 					jQuery.mbYTPlayer.getDataFromAPI( YTPlayer );
 					jQuery( YTPlayer ).on( "YTPChanged", function() {
@@ -887,7 +890,7 @@ var getYTPVideoID = function( url ) {
 		 */
 		play: function() {
 			var YTPlayer = this.get( 0 );
-			if( !YTPlayer.isReady ) return;
+			// if( !YTPlayer.isReady ) return;
 
 			YTPlayer.player.playVideo();
 			YTPlayer.wrapper.CSSAnimate( {
@@ -1310,7 +1313,7 @@ var getYTPVideoID = function( url ) {
 		buildControls: function( YTPlayer ) {
 			var data = YTPlayer.opt;
 			// @data.printUrl: is deprecated; use data.showYTLogo
-			data.showYTLogo = data.showYTLogo || data.printUrl;
+			data.showYTLogo = false;
 			if( jQuery( "#controlBar_" + YTPlayer.id ).length ) return;
 			YTPlayer.controlBar = jQuery( "<span/>" ).attr( "id", "controlBar_" + YTPlayer.id ).addClass( "mb_YTPBar" ).css( {
 				whiteSpace: "noWrap",
@@ -1595,7 +1598,7 @@ var getYTPVideoID = function( url ) {
 			YTPlayer.player.seekTo( startAt, true );
 
 			YTPlayer.checkForStartAt = setInterval( function() {
-
+				$YTPlayer.YTPPlay();
 				jQuery( YTPlayer ).YTPMute();
 
 				var canPlayVideo = YTPlayer.player.getVideoLoadedFraction() >= startAt / YTPlayer.player.getDuration();
