@@ -1732,19 +1732,19 @@ sup {
   background-size: cover;
 }
 
-/*#section7,*/
+#section7,
 #menu li.main-nav:nth-child(7)::after {
-  background: url("../img/background-7.jpg") center;
+  background: url("../img/IMG_8489.jpeg") center;
   background-size: cover;
 }
 
-#section7 {
+/* #section7 {
   background: #2B2D35;
-}
+} */
 
 #section8,
 #menu li.main-nav:nth-child(8)::after {
-  background: url("../img/IMG_8489.jpeg") center;
+  background: url("../img/IMG_8157.jpeg") center;
   background-size: cover;
 }
 
