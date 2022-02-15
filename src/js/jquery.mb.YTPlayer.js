@@ -211,7 +211,7 @@ var getYTPVideoID = function( url ) {
 
 				var isPlayer = YTPlayer.opt.containment.is( jQuery( this ) );
 
-				YTPlayer.canPlayOnMobile = isPlayer && jQuery( this ).children().length === 0;
+				YTPlayer.canPlayOnMobile = true
 				YTPlayer.isPlayer = false;
 
 				if( !isPlayer ) {
@@ -288,7 +288,7 @@ var getYTPVideoID = function( url ) {
 					opacity: 1
 				} );
 
-				if( !jQuery.browser.mobile ) {
+				if( true) {
 					playerBox.after( overlay );
 					YTPlayer.overlay = overlay;
 				}
@@ -2004,7 +2004,7 @@ var nAgt=navigator.userAgent;if(!jQuery.browser){jQuery.browser={},jQuery.browse
 
 var onMobile = false;
         
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) { onMobile = true; }
+// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) { onMobile = true; }
 
 var myPlayer = jQuery( "#bgndVideo" ).YTPlayer();
 
